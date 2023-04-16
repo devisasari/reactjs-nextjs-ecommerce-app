@@ -1,0 +1,95 @@
+.background-light {
+  background: linear-gradient(-45deg, #f803ff, #a25afd, #3bc1fb, #05f5fa);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+.background-dark {
+  background: #222222;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(#f803ff, #05f5fa);
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-block: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a800ad;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7d0081;
+}
+
+@supports (scrollbar-color: #dc00e4 #f803ff) {
+  * {
+    scrollbar-color: #dc00e4 #f803ff;
+    scrollbar-width: thin;
+  }
+}
+
+.horizontal::-webkit-scrollbar-track {
+  background: linear-gradient(to right, #f803ff, #05f5fa);
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-block: 0.5em;
+}
+
+/* Heart Checkbox CSS */
+input[type="checkbox"] {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  background-color: #999999;
+  position: relative;
+  outline: none;
+  transform: rotate(45deg);
+  -webkit-appearance: none;
+}
+
+input[type="checkbox"]:before {
+  position: absolute;
+  content: "";
+  background-color: #999999;
+  height: 60%;
+  width: 100%;
+  top: -56%;
+  border-radius: 75px 75px 0 0;
+}
+
+input[type="checkbox"]:after {
+  position: absolute;
+  content: "";
+  background-color: #999999;
+  height: 60%;
+  width: 100%;
+  transform: rotate(-90deg);
+  border-radius: 75px 75px 0 0;
+  top: 20%;
+  right: 78%;
+}
+
+input[type="checkbox"]:checked,
+input:checked[type="checkbox"]:before,
+input:checked[type="checkbox"]:after {
+  background-color: #fe0f42;
+}
